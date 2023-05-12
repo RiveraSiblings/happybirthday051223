@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "happy-birthday-nolan": {
+      "hosting": {
+        "happy-birthday-nolan": [
+          "happy-birthday-nolan"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "happy-birthday-nolan"
+  }
+}

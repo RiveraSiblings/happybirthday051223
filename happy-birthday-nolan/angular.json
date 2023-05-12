@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "happy-birthday": {
+    "happy-birthday-nolan": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/happy-birthday",
+            "outputPath": "dist/happy-birthday-nolan",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "happy-birthday:build:production"
+              "browserTarget": "happy-birthday-nolan:build:production"
             },
             "development": {
-              "browserTarget": "happy-birthday:build:development"
+              "browserTarget": "happy-birthday-nolan:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "happy-birthday:build"
+            "browserTarget": "happy-birthday-nolan:build"
           }
         },
         "test": {
@@ -96,11 +96,21 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "happy-birthday-nolan:build:production",
+            "firebaseProject": "happy-birthday-nolan",
+            "firebaseHostingSite": "happy-birthday-nolan"
+          }
         }
       }
     }
   },
   "cli": {
-    "analytics": "7390ff90-61f0-4cb7-b814-970f675b2a59"
+    "analytics": "7ea2b07d-c4fb-48be-8cc9-ea3a447b31c7"
   }
 }
