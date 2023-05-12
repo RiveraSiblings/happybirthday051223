@@ -7,11 +7,21 @@ body {
 .gallery-item, .img-responsive {
   margin: 3px;
   height: 10em;
+  object-fit: cover;
+  width: 10em;
+}
+
+.center {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .images {
-  display: flex-wrap;
+  display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
   h1,h2,h3,h4,h5,h6 {

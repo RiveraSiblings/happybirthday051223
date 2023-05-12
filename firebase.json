@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "happy-birthday-nolan/dist/happy-birthday-nolan",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

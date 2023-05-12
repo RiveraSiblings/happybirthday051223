@@ -29,6 +29,14 @@ export class AppComponent {
       console.log(`Dialog result: ${result}`);
     });
   }
+
+  openKuyaLetter() {
+    const dialogRef = this.dialog.open(NoahLetterDialog, );
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 }
 
 @Component({
@@ -36,3 +44,9 @@ export class AppComponent {
   templateUrl: 'noelle-letter.html',
 })
 export class NoelleLetterDialog {}
+
+@Component({
+  selector: 'noah-letter',
+  templateUrl: 'noah-letter.html',
+})
+export class NoahLetterDialog {}
